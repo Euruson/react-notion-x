@@ -144,7 +144,7 @@ function Table({
                 <div className='notion-table-row' key={blockId}>
                   {properties.map((p: any) => {
                     const schema = collection.schema?.[p.property]
-                    const block = recordMap.block[blockId]?.value
+                    const block = recordMap.block[blockId]?.value.value
                     const data = block?.properties?.[p.property]
                     const isTitle = p.property === 'title'
                     const style: React.CSSProperties = {}

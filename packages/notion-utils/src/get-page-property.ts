@@ -35,8 +35,7 @@ export function getPageProperty(
       return null
     }
 
-    const collection = recordMap.collection[block.parent_id]?.value
-
+    const collection = recordMap.collection[block.parent_id]?.value.value
     if (collection) {
       const propertyNameL = propertyName.toLowerCase()
       const propertyId = Object.keys(collection.schema).find(

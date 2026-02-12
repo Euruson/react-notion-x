@@ -15,7 +15,7 @@ export function getBlockTitle(block: Block, recordMap: ExtendedRecordMap) {
     const collectionId = getBlockCollectionId(block, recordMap)
 
     if (collectionId) {
-      const collection = recordMap.collection[collectionId]?.value
+      const collection = recordMap.collection[collectionId]?.value.value
 
       if (collection) {
         return getTextContent(collection.name)

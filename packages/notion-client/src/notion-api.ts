@@ -252,7 +252,8 @@ export class NotionAPI {
           blockValue?.parent_table === 'collection' &&
           blockValue?.parent_id
         ) {
-          const collection = recordMap.collection[blockValue.parent_id]?.value
+          const collection =
+            recordMap.collection[blockValue.parent_id]?.value.value
           if (collection?.schema) {
             const ids = this.extractRelationPageIdsFromBlock(
               blockValue,

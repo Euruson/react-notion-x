@@ -102,7 +102,6 @@ export function Block(props: BlockProps) {
   if (level === 0 && block.type === 'collection_view') {
     ;(block as any).type = 'collection_view_page'
   }
-
   const blockId = hideBlockId
     ? 'notion-block'
     : `notion-block-${uuidToId(block.id)}`

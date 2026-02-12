@@ -16,7 +16,10 @@ export interface NotionMap<T> {
 
 export type BlockMap = NotionMap<Block>
 export type UserMap = NotionMap<User>
-export type CollectionMap = NotionMap<Collection>
+export type CollectionMap = {
+  [key: string]: { role: Role; value: { spaceId: ID; value: Collection } }
+}
+// export type CollectionMap = NotionMap<Collection>
 export type CollectionViewMap = NotionMap<CollectionView>
 
 export interface PropertyMap {

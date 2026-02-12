@@ -30,7 +30,7 @@ export const getBlockParentPage = (
     }
 
     if (parentTable === 'collection') {
-      currentRecord = recordMap.collection[parentId]?.value
+      currentRecord = recordMap.collection[parentId]?.value.value
     } else {
       currentRecord = recordMap.block[parentId]?.value
 

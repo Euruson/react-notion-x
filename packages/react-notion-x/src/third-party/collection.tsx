@@ -120,10 +120,11 @@ function CollectionViewBlock({
     windowWidth = 1024
   }
 
-  const collection = recordMap.collection[collectionId]?.value
+  const collection = recordMap.collection[collectionId]?.value.value
   const collectionView = recordMap.collection_view[collectionViewId]?.value
   const collectionData =
     recordMap.collection_query[collectionId]?.[collectionViewId]
+  // console.log(collectionData)
   const parentPage = getBlockParentPage(block, recordMap)
 
   const { width, padding } = React.useMemo(() => {

@@ -140,7 +140,11 @@ export function NotionBlockRenderer({
 }) {
   const { recordMap } = useNotionContext()
   const id = blockId || Object.keys(recordMap.block)[0]!
-  const block = recordMap.block[id]?.value
+  let block = recordMap.block[id]?.value
+  if (block && Object.hasOwn(block, 'value')) {
+    block = (block as any).value
+  }
+  console.log(block)
 
   if (!block) {
     if (process.env.NODE_ENV !== 'production') {
